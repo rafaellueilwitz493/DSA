@@ -526,6 +526,40 @@ void pattern29(int n){
         cout<<endl;
     }
 }
+
+void pattern30(int n){
+    // Top Half
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n-i-1; j++){
+            cout<<" ";
+        }
+        for (int j = 0; j < i+1; j++){
+            cout<<j+1;
+        }
+        for (int j = i; j > 0; j--){
+            cout<<j;
+        }
+        cout<<endl;
+    }
+    
+    // Bottom Half
+    for (int i = 0; i < n-1; i++){
+        for (int j = 0; j < i+1; j++){
+            cout<<" ";
+        }
+
+        for (int j = 1; j < n-i; j++){
+            cout<<j;
+        }
+
+        for (int j = n-2-i; j > 0; j--){
+            cout<<j;
+        }
+
+        cout<<endl;
+    }
+}
+
 int main(){
     // pattern1(3);
     // pattern2(4);
@@ -556,5 +590,6 @@ int main(){
     // pattern27(5);
     // pattern28(5);
     // pattern29(5);
+    pattern30(5);
     return 0;
 }
